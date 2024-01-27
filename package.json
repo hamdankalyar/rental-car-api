@@ -1,0 +1,22 @@
+{
+  "name": "rental-car-api",
+  "version": "1.0.0",
+  "description": "car rental api used for the rent a car and managing its data ",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^3.0.3",
+    "npm": "^10.4.0",
+    "or": "^0.2.0"
+  }
+}
