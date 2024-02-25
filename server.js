@@ -1,17 +1,22 @@
-const express = require("express");
+const express = require('express');
+const dotenv = require('dotenv');
 
-const dotenv = require("dotenv");
+//Route files
+const vehicles = require('./routes/vehicles.js');
 
 // load env vars
-
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: './config/config.env' });
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+// Mount routers
+app.use('/api/v1/vehicles', vehicles);
+
+const PORT = process.env.PORT || 6000;
 
 app.listen(
   PORT,
-
-  console.log(`Server in ${process.env.NODE_ENV} running on the port ${PORT}`)
+  console.log(
+    `Server in ${process.env.NODE_ENV} running on the port ${PORT}`
+  )
 );
